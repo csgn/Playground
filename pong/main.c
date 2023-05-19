@@ -63,8 +63,18 @@ static void loop() {
     event_poll();
 
     for (int i = 0; i < app.manager->actor_count; i++) {
-      app.manager->actors[i]->update();
+      if (app.status != APP_PAUSE) {
+        app.manager->actors[i]->update();
+      }
       app.manager->actors[i]->render();
+    }
+
+    if (app.keyboard[SDL_SCANCODE_P]) {
+      app.status = APP_PAUSE;
+    }
+
+    if (app.keyboard[SDL_SCANCODE_N]) {
+      app.status = APP_RUN;
     }
 
     SDL_RenderPresent(app.renderer);

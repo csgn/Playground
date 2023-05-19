@@ -11,6 +11,7 @@
 enum AppStatus {
   APP_QUIT,
   APP_RUN,
+  APP_RESET,
   APP_PAUSE,
 };
 

@@ -10,6 +10,8 @@ typedef struct {
   int index;       // index number
   int tag;         // object tag
   int velocity;    // movement speed
+  int dirX;        // object direction left or right
+  int dirY;        // object direction up or down
   SDL_Color color; // object color
   SDL_Rect object; // rectangle object
 

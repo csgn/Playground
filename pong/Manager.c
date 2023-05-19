@@ -18,6 +18,8 @@ Actor *actor_init() {
   actor->object.w = 16;
   actor->object.h = 48;
   actor->velocity = 8;
+  actor->dirX = 1;
+  actor->dirY = 1;
   actor->color = color;
 
   return actor;
